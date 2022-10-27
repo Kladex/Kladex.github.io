@@ -30,7 +30,10 @@ const Home: React.FC = () => {
           I have passion in coding like I'm playing games. Both have challenges
           and achievements at each step.
         </p>
-        <a href="https://www.google.com" className="px-8 py-2 border rounded">
+        <a
+          href="https://res.cloudinary.com/dimnvx4vy/image/upload/v1666897640/Suwatcharin_Resume.pdf"
+          className="px-8 py-2 border rounded"
+        >
           Download CV
         </a>
       </div>
