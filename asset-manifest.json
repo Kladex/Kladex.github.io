@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe729f98.css",
-    "main.js": "/static/js/main.10ec0150.js",
+    "main.css": "/static/css/main.51b73f2c.css",
+    "main.js": "/static/js/main.d012b25c.js",
+    "static/media/weather-app.png": "/static/media/weather-app.f0c899935d754d194370.png",
     "static/media/my-img.png": "/static/media/my-img.0e343184aa23461429d9.png",
     "static/media/PostgreSQL.png": "/static/media/PostgreSQL.5b877059fdc10482a70a.png",
     "static/media/MongoDB.png": "/static/media/MongoDB.d0346a707b1b3588a120.png",
@@ -9,6 +10,7 @@
     "static/media/Git.png": "/static/media/Git.c9944b7b40875d2448eb.png",
     "static/media/cypress.png": "/static/media/cypress.7773e2001d18587595dd.png",
     "static/media/nextjs.png": "/static/media/nextjs.27977151b0df2685d09c.png",
+    "static/media/get-that-job.png": "/static/media/get-that-job.e65382d726e24bcb0da3.png",
     "static/media/Typescript_logo_2020.png": "/static/media/Typescript_logo_2020.e91afe40002e70d50ab3.png",
     "static/media/nodejs.png": "/static/media/nodejs.007e99f68b718e476aba.png",
     "static/media/jest.png": "/static/media/jest.79b8f15d58d326e3bf9c.png",
@@ -20,11 +22,11 @@
     "static/media/redux.svg": "/static/media/redux.71eb13e2fdd1de624e9a856125906e3b.svg",
     "index.html": "/index.html",
     "static/media/tailwind.svg": "/static/media/tailwind.fa33f4e8e025e5e800a2b8938c449152.svg",
-    "main.fe729f98.css.map": "/static/css/main.fe729f98.css.map",
-    "main.10ec0150.js.map": "/static/js/main.10ec0150.js.map"
+    "main.51b73f2c.css.map": "/static/css/main.51b73f2c.css.map",
+    "main.d012b25c.js.map": "/static/js/main.d012b25c.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe729f98.css",
-    "static/js/main.10ec0150.js"
+    "static/css/main.51b73f2c.css",
+    "static/js/main.d012b25c.js"
   ]
 }
