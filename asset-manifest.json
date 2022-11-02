@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe729f98.css",
+    "main.js": "/static/js/main.10ec0150.js",
+    "static/media/my-img.png": "/static/media/my-img.0e343184aa23461429d9.png",
+    "static/media/PostgreSQL.png": "/static/media/PostgreSQL.5b877059fdc10482a70a.png",
+    "static/media/MongoDB.png": "/static/media/MongoDB.d0346a707b1b3588a120.png",
+    "static/media/expressjs.png": "/static/media/expressjs.0257cdccf82fcd15f2db.png",
+    "static/media/Git.png": "/static/media/Git.c9944b7b40875d2448eb.png",
+    "static/media/cypress.png": "/static/media/cypress.7773e2001d18587595dd.png",
+    "static/media/nextjs.png": "/static/media/nextjs.27977151b0df2685d09c.png",
+    "static/media/Typescript_logo_2020.png": "/static/media/Typescript_logo_2020.e91afe40002e70d50ab3.png",
+    "static/media/nodejs.png": "/static/media/nodejs.007e99f68b718e476aba.png",
+    "static/media/jest.png": "/static/media/jest.79b8f15d58d326e3bf9c.png",
+    "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
+    "static/media/css-3.png": "/static/media/css-3.4a6549b8c2b4cda8bb88.png",
+    "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
+    "static/media/chakra.svg": "/static/media/chakra.a7c90727095d957067080107dd6664d6.svg",
+    "static/media/react-logo.svg": "/static/media/react-logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/redux.svg": "/static/media/redux.71eb13e2fdd1de624e9a856125906e3b.svg",
+    "index.html": "/index.html",
+    "static/media/tailwind.svg": "/static/media/tailwind.fa33f4e8e025e5e800a2b8938c449152.svg",
+    "main.fe729f98.css.map": "/static/css/main.fe729f98.css.map",
+    "main.10ec0150.js.map": "/static/js/main.10ec0150.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe729f98.css",
+    "static/js/main.10ec0150.js"
+  ]
+}
