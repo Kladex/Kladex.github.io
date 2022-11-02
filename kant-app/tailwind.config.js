@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -27,20 +31,23 @@ module.exports = {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        moveDown: {
+          from: { transform: "translate(0)" },
+          to: { transform: "translate(0px, 15px)" },
+        },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out 5",
         rotate: "rotate 2s linear 1",
+        moveDown: "moveDown 1s ease-out 0",
       },
       screens: {
-        sx: { min: "100px", max: "319px" },
-        sm: { min: "320px", max: "767px" },
-        // => @media (min-width: 320px and max-width: 767px) { ... }
+        sx: { min: "100px", max: "375px" },
+        sm: { min: "376px", max: "767px" },
         md: { min: "768px", max: "1300px" },
-        // => @media (min-width: 768px and max-width: 1023px) { ... }
-        // xl: { min: "1024px" },
+        lg: { min: "1301px", max: "1920px" },
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 };

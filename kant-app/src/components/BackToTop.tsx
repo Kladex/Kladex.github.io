@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const BackToTop: React.FC = () => {
-  const [showBackToTop, SetShowBackToTop] = useState(false);
-  console.log(window.scrollY);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        SetShowBackToTop(true);
-      } else {
-        SetShowBackToTop(false);
-      }
-    });
-  }, []);
+  // ---------- Did not complete --------- //
+  // const [showBackToTop, SetShowBackToTop] = useState(false);
+  // useEffect(() => {
+  //   const handleScoreButtonVisibility = () => {
+  //     window.pageYOffset > 100
+  //       ? SetShowBackToTop(true)
+  //       : SetShowBackToTop(false);
+  //   };
+  //   window.addEventListener("scroll", handleScoreButtonVisibility);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScoreButtonVisibility);
+  //   };
+  // }, []);
 
   const backToTop = () => {
     window.scrollTo({
@@ -22,14 +25,14 @@ const BackToTop: React.FC = () => {
 
   return (
     <>
-      {showBackToTop && (
-        <button
-          className="w-full mb-5 text-lg font-bold text-secondary animate-bounce"
-          onClick={backToTop}
-        >
-          Go to Top
-        </button>
-      )}
+      {/* {showBackToTop && ( */}
+      <button
+        className="w-full my-5 mt-10 text-lg font-bold text-secondary animate-bounce"
+        onClick={backToTop}
+      >
+        Go to Top
+      </button>
+      {/* )} */}
     </>
   );
 };

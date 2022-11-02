@@ -6,7 +6,9 @@ import { useState } from "react";
 import BackToTop from "./components/BackToTop";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills";
+import CarouselSkills from "./components/CarouselSkills";
+import Projects from "./components/Projects";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -20,21 +22,25 @@ function App() {
 
   return (
     <div
-      className="flex flex-col antialiased App bg-primary"
+      className="flex flex-col h-auto antialiased App bg-primary"
       onMouseMove={whereIsMyMouse}
     >
       <Navigation mousePosition={mousePosition} />
-      <section className="w-full lg:h-screen">
+      <section className="w-full mb-10 lg:h-screen" id="home">
         <Home />
       </section>
-      <section className="w-full lg:h-content">
+      {/* <section className="w-full lg:h-content" id="skill-section">
         <Skills />
-        <BackToTop />
+      </section> */}
+      <section className="w-full px-5 h-content" id="skill-section">
+        <CarouselSkills />
       </section>
+      <section className="w-full h-screen" id="project-section">
+        <Projects />
+      </section>
+      <BackToTop />
     </div>
   );
 }
 
 export default App;
-
-/* <img src={reactLogo} className="react-logo" alt="logo" /> */
