@@ -10,6 +10,14 @@ const Experience: React.FC = () => (
         <time dateTime="2023-01">January 2023</time> – Present
       </p>
     </article>
+    <article className="border-l-2 border-teal-400 pl-6 py-2 mt-8">
+      <h3 className="text-2xl font-semibold">Developer Fellow</h3>
+      <p className="text-xl mt-2">TechUp</p>
+      <p className="mt-2 opacity-80">Short-term contract</p>
+      <p className="mt-3 opacity-80">
+        <time dateTime="2022-07">July 2022</time> – <time dateTime="2022-12">December 2022</time>
+      </p>
+    </article>
   </div>
 );
 
