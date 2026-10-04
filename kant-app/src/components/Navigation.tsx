@@ -1,54 +1,16 @@
-import React, { Dispatch, SetStateAction } from "react";
-
+import React from "react";
 import EyesAndIris from "./Eyes";
-import { EyesPosition } from "../types/types";
 import ProgressBar from "./ProgressBar";
 
-const Navigation: React.FC<{
-  mousePosition: EyesPosition;
-  setDarkToggle: Dispatch<SetStateAction<boolean>>;
-  darkToggle: boolean;
-}> = ({ mousePosition, setDarkToggle, darkToggle }) => {
-  let { x, y } = mousePosition;
-
-  return (
-    <nav className="fixed z-10 flex flex-col w-full ">
-      <ProgressBar />
-      <div className="flex flex-row justify-between items-center p-10 text-secondary h-[12vh] font-silk  bg-primary/75 w-full sm:p-10 sx:px-5 dark:text-primary dark:bg-secondarydark/80">
-        <div className="flex flex-row items-center lg:w-1/3 md:w-2/3 ">
-          <EyesAndIris x={x} y={y} />
-          <h1 className="pl-5 text-xl tracking-wide text-center first-letter:text-4xl">
-            <span className="lg:text-2xl md:text-xl text-secondarydark sx:hidden dark:text-blue-800">
-              Suwatcharin
-            </span>{" "}
-            <span className="sm:hidden sx:hidden">keeps an eye on you</span>
-          </h1>
-        </div>
-
-        <div className="flex flex-row h-16 lg:w-1/4 md:w-2/4 sm:w-2/4 lg:text-lg justify-evenly sm:text-xs sx:w-3/4 sx:text-xs">
-          <a
-            href="#home"
-            className="flex items-center justify-center w-1/3 bg-transparent rounded-lg hover:shadow-pink-50/75 hover:shadow-newInner hover:scale-110"
-          >
-            <button>Home</button>
-          </a>
-
-          <a
-            href="#skill-section"
-            className="flex items-center justify-center w-1/3 bg-transparent rounded-lg hover:shadow-pink-50/75 hover:shadow-newInner hover:scale-110"
-          >
-            <button>Skills</button>
-          </a>
-
-          <a
-            href="#project-section"
-            className="flex items-center justify-center w-1/3 bg-transparent rounded-lg hover:shadow-pink-50/75 hover:shadow-newInner hover:scale-110"
-          >
-            <button>Projects</button>
-          </a>
-        </div>
+const Navigation: React.FC = () => (
+  <nav aria-label="Main navigation" className="fixed z-10 w-full bg-primary/95 dark:bg-secondary/95 text-secondary dark:text-primary">
+    <ProgressBar />
+    <div className="flex items-center justify-between gap-3 px-5 py-5 max-w-6xl mx-auto">
+      <a href="#home" className="flex items-center gap-3"><EyesAndIris /><span className="hidden sm:inline font-silk">Suwatcharin</span></a>
+      <div className="flex gap-5 sm:gap-8">
+        <a href="#home">Home</a><a href="#skill-section">Skills</a><a href="#project-section">Projects</a>
       </div>
-    </nav>
-  );
-};
+    </div>
+  </nav>
+);
 export default Navigation;

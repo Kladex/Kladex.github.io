@@ -15,8 +15,9 @@ npm start
 
 To build locally, run `npm run build` inside `kant-app`.
 
-## Deployment caution
+## Deployment
 
-The original `npm run deploy` script uses `gh-pages -b main -d build`.
-Do not use that script unchanged: it replaces the contents of `main` with build output and can remove the preserved source.
-For a future deployment, use a separate publishing branch or GitHub Actions, or update only the root build assets while retaining `kant-app/`.
+GitHub Actions builds `kant-app` and publishes its build artifact when source changes are pushed to `main`.
+Set Settings → Pages → Source to **GitHub Actions**.
+The workflow preserves source files and does not write build output back to Git.
+The root build files are retained as a legacy snapshot; the workflow publishes `kant-app/build`.

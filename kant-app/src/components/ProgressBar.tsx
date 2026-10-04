@@ -1,32 +1,27 @@
-import React, { useEffect, useState } from "react";
-import styled from "@emotion/styled";
+import React, { useEffect, useRef } from "react";
 
 const ProgressBar: React.FC = () => {
-  const [progress, setProgress] = useState(0);
-  const scrollHeight = (): void => {
-    let element = document.documentElement;
-    let ScrollTop = element.scrollTop;
-    // || document.body.scrollTop;
-    let ScrollHeight = element.scrollHeight;
-    // || document.body.scrollHeight;
-
-    let percent = (ScrollTop / (ScrollHeight - element.clientHeight)) * 100;
-    setProgress(percent);
-  };
-
+  const bar = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    window.addEventListener("scroll", scrollHeight);
-    return () => window.removeEventListener("scroll", scrollHeight);
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const root = document.documentElement;
+        const distance = root.scrollHeight - root.clientHeight;
+        const progress = distance > 0 ? Math.max(0, Math.min(1, root.scrollTop / distance)) : 0;
+        if (bar.current) bar.current.style.transform = `scaleX(${progress})`;
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+      cancelAnimationFrame(frame);
+    };
   }, []);
-
-  const Bar = styled.div`
-    position: fixed;
-    height: 6px;
-    border-radius: 0px 2px 0px 0px;
-    background: linear-gradient(90deg, #c6ffdd 0%, #fbd786 100%, #2c5364 100%);
-  `;
-
-  return <Bar className="z-10" style={{ width: progress + "%" }}></Bar>;
+  return <div ref={bar} aria-hidden="true" className="fixed top-0 left-0 w-full h-1 origin-left bg-teal-400 z-20" style={{ transform: "scaleX(0)" }} />;
 };
-
 export default ProgressBar;

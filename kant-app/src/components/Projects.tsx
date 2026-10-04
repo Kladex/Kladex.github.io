@@ -1,18 +1,19 @@
 import React from "react";
 
-import weatherApp from "../assets/image/weather-app.png";
-import getThatJob from "../assets/image/get-that-job.png";
+import weatherApp from "../assets/image/weather-app.webp";
+import getThatJob from "../assets/image/get-that-job.webp";
 
 const Projects: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col px-[5%] mt-10 text-secondary justify-center w-full font-silk dark:text-primary">
-        <h1 className="text-5xl font-bold sx:text-2xl">Projects</h1>
-        <div className="flex flex-row justify-between w-full space-x-16 mt-14 sx:flex-col sx:justify-center sx:space-x-0">
+      <div className="flex flex-col px-5 max-w-6xl mx-auto text-secondary justify-center w-full font-silk dark:text-primary">
+        <h2 className="text-3xl sm:text-5xl font-bold">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
           <div className="flex flex-col group sx:mb-5">
             <img
               src={weatherApp}
-              alt="weather-app"
+              alt="Weather app preview"
+              loading="lazy"
               className="ease-in-out rounded-xl bg-secondary group-hover:scale-110 group-hover:duration-100 min-w-[150px]"
             />
             <a
@@ -27,7 +28,8 @@ const Projects: React.FC = () => {
           <div className="flex flex-col group">
             <img
               src={getThatJob}
-              alt="weather-app"
+              alt="Get that job application preview"
+              loading="lazy"
               className="ease-in-out bg-secondary group-hover:duration-100 group-hover:scale-110 rounded-xl min-w-[150px] "
             />
             <div className="text-xl ease-in-out group-hover:duration-100 group-hover:translate-y-6 group-hover:-translate-x-8 sx:group-hover:translate-y-2 sx:group-hover:-translate-x-2">
@@ -35,9 +37,7 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <h1 className="mt-20 text-5xl font-bold sx:text-2xl">
-          Under Construction . . .
-        </h1>
+
       </div>
     </>
   );

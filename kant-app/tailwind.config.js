@@ -4,7 +4,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
     extend: {
@@ -42,13 +41,8 @@ module.exports = {
         rotate: "rotate 2s linear 1",
         moveDown: "moveDown 1s ease-out 0",
       },
-      screens: {
-        sx: { min: "100px", max: "375px" },
-        sm: { min: "376px", max: "767px" },
-        md: { min: "768px", max: "1300px" },
-        lg: { min: "1301px", max: "1920px" },
-      },
+
     },
   },
-  plugins: [require("tw-elements/dist/plugin")],
+  plugins: [],
 };
