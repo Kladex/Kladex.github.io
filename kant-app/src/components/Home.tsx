@@ -29,6 +29,9 @@ const Home: React.FC = () => {
             </span>
           </h2>
           <p className="sx:mt-3">
+            Currently a Full Stack Developer at Muze Innovation, since January 2023.
+          </p>
+          <p>
             I enjoy coding like playing games. Both offer
             challenges and achievements at each step.
           </p>

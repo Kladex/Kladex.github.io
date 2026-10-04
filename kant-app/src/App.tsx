@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
@@ -19,6 +20,9 @@ function App() {
           <Home />
         </section>
 
+        <section className="w-full py-12" id="experience-section">
+          <Experience />
+        </section>
         <section className="w-full py-12" id="skill-section">
           <Skills />
         </section>
